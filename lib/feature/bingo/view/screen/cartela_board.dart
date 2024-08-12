@@ -1,3 +1,4 @@
+import 'package:bingo/feature/bingo/view/screen/shuffle_board.dart';
 import 'package:flutter/material.dart';
 
 import '../widget/cartela_number.dart';
@@ -27,7 +28,17 @@ class CartelaBoard extends StatelessWidget {
             padding: const EdgeInsets.only(bottom: 10.0, top: 10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [OutlinedButton(onPressed: () {}, child: Text('Play'))],
+              children: [
+                OutlinedButton(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => const ShuffleBoard(),
+                        ),
+                      );
+                    },
+                    child: const Text('Play')),
+              ],
             ),
           ),
         ],
