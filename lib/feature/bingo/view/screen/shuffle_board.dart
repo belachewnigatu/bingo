@@ -11,10 +11,11 @@ class ShuffleBoard extends StatelessWidget {
           Align(
             alignment: Alignment.topLeft,
             child: IconButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: Icon(Icons.arrow_back)),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: const Icon(Icons.arrow_back),
+            ),
           )
         ],
       ),
