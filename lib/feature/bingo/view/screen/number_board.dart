@@ -1,9 +1,9 @@
 import 'package:bingo/feature/bingo/view/screen/shuffle_board.dart';
 import 'package:flutter/material.dart';
 
-import '../widget/cartela_number.dart';
+import '../widget/number_box.dart';
 
-class CartelaBoard extends StatelessWidget {
+class NumberBoard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,28 +16,36 @@ class CartelaBoard extends StatelessWidget {
               child: GridView.count(
                 mainAxisSpacing: 5,
                 crossAxisSpacing: 5,
-                crossAxisCount: 10,
+                crossAxisCount: 15,
                 children: [
-                  ...List.generate(
-                      100, (index) => CartelaNumber(index: index + 1))
+                  ...List.generate(200, (index) => NumberBox(index: index + 1))
                 ],
               ),
             ),
           ),
-          Padding(
+          Container(
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  Colors.green,
+                  Colors.black,
+                ],
+              ),
+            ),
             padding: const EdgeInsets.only(bottom: 10.0, top: 10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 OutlinedButton(
-                    onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) => const ShuffleBoard(),
-                        ),
-                      );
-                    },
-                    child: const Text('Play')),
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const ShuffleBoard(),
+                      ),
+                    );
+                  },
+                  child: const Text('Next'),
+                ),
               ],
             ),
           ),

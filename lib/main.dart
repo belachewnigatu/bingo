@@ -1,4 +1,4 @@
-import 'package:bingo/feature/bingo/view/screen/cartela_board.dart';
+import 'package:bingo/feature/bingo/view/screen/number_board.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CartelaBoard(),
+      home: NumberBoard(),
     );
   }
 }
