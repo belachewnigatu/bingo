@@ -1,36 +1,37 @@
 import 'package:flutter/material.dart';
 
+import '../screen/number_board.dart';
+
 class NumberBox extends StatefulWidget {
   NumberBox({
     super.key,
     required this.index,
-    this.disableSelection = false,
     this.isSelected = false,
+    required this.onSelected,
   });
   final int index;
   bool disableSelection = false;
   bool isSelected = false;
+
+  Function(int num) onSelected;
 
   @override
   State<NumberBox> createState() => _NumberBoxState();
 }
 
 class _NumberBoxState extends State<NumberBox> {
-  bool isSelected = false;
+  var numBoard = NumberBoard();
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
         setState(() {
-          isSelected = !isSelected;
+          widget.isSelected = !widget.isSelected;
         });
+        widget.onSelected(widget.index);
       },
-      child: widget.disableSelection
-          ? notSelectedBox()
-          : isSelected
-              ? selectedBox()
-              : notSelectedBox(),
+      child: widget.isSelected ? selectedBox() : notSelectedBox(),
     );
   }
 
@@ -40,17 +41,19 @@ class _NumberBoxState extends State<NumberBox> {
       height: 10,
       decoration: BoxDecoration(
         gradient: const LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [Colors.red, Colors.amber]),
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [Colors.red, Colors.amber],
+        ),
         borderRadius: BorderRadius.circular(10),
         color: Colors.red,
       ),
       child: Center(
-          child: Text(
-        widget.index.toString(),
-        style: const TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
-      )),
+        child: Text(
+          widget.index.toString(),
+          style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+        ),
+      ),
     );
   }
 
@@ -64,7 +67,7 @@ class _NumberBoxState extends State<NumberBox> {
           gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: isSelected
+              colors: widget.isSelected
                   ? [Colors.red, Colors.amber]
                   : [Colors.green, Colors.amber]),
           border: Border.all(),
@@ -74,7 +77,7 @@ class _NumberBoxState extends State<NumberBox> {
         child: Center(
           child: Text(
             widget.index.toString(),
-            style: const TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+            style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
           ),
         ),
       ),

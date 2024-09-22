@@ -35,6 +35,8 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
+  audioplayers: ^6.1.0
+  confetti: ^0.7.0
 
 dev_dependencies:
   flutter_test:
@@ -59,8 +61,96 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - assets/sound/1.mp3
+    - assets/sound/2.mp3
+    - assets/sound/3.mp3
+    - assets/sound/4.mp3
+    - assets/sound/5.mp3
+    - assets/sound/6.mp3
+    - assets/sound/7.mp3
+    - assets/sound/8.mp3
+    - assets/sound/9.mp3
+    - assets/sound/10.mp3
+    - assets/sound/11.mp3
+    - assets/sound/12.mp3
+    - assets/sound/13.mp3
+    - assets/sound/14.mp3
+    - assets/sound/15.mp3
+    - assets/sound/16.mp3
+    - assets/sound/17.mp3
+    - assets/sound/18.mp3
+    - assets/sound/19.mp3
+    - assets/sound/20.mp3
+    - assets/sound/21.mp3
+    - assets/sound/22.mp3
+    - assets/sound/23.mp3
+    - assets/sound/24.mp3
+    - assets/sound/25.mp3
+    - assets/sound/26.mp3
+    - assets/sound/27.mp3
+    - assets/sound/28.mp3
+    - assets/sound/29.mp3
+    - assets/sound/30.mp3
+    - assets/sound/31.mp3
+    - assets/sound/32.mp3
+    - assets/sound/33.mp3
+    - assets/sound/34.mp3
+    - assets/sound/35.mp3
+    - assets/sound/36.mp3
+    - assets/sound/37.mp3
+    - assets/sound/38.mp3
+    - assets/sound/39.mp3
+    - assets/sound/40.mp3
+    - assets/sound/41.mp3
+    - assets/sound/42.mp3
+    - assets/sound/43.mp3
+    - assets/sound/44.mp3
+    - assets/sound/45.mp3
+    - assets/sound/46.mp3
+    - assets/sound/47.mp3
+    - assets/sound/48.mp3
+    - assets/sound/49.mp3
+    - assets/sound/50.mp3
+    - assets/sound/51.mp3
+    - assets/sound/52.mp3
+    - assets/sound/53.mp3
+    - assets/sound/54.mp3
+    - assets/sound/55.mp3
+    - assets/sound/56.mp3
+    - assets/sound/57.mp3
+    - assets/sound/58.mp3
+    - assets/sound/59.mp3
+    - assets/sound/60.mp3
+    - assets/sound/61.mp3
+    - assets/sound/62.mp3
+    - assets/sound/63.mp3
+    - assets/sound/64.mp3
+    - assets/sound/65.mp3
+    - assets/sound/66.mp3
+    - assets/sound/67.mp3
+    - assets/sound/68.mp3
+    - assets/sound/69.mp3
+    - assets/sound/70.mp3
+    - assets/sound/71.mp3
+    - assets/sound/72.mp3
+    - assets/sound/73.mp3
+    - assets/sound/74.mp3
+    - assets/sound/75.mp3
+
+    
+    - assets/sound/76.mp3
+    - assets/sound/77.mp3
+    - assets/sound/78.mp3
+    - assets/sound/79.mp3
+    - assets/sound/80.mp3
+
+    - assets/images/letter-icons/b.png
+    - assets/images/letter-icons/i.png
+    - assets/images/letter-icons/o.png
+    - assets/images/letter-icons/g.png
+    - assets/images/letter-icons/n.png
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

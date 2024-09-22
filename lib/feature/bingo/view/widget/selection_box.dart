@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 class SelectionBox extends StatelessWidget {
-  SelectionBox({this.isSelected = false, required this.index});
+  SelectionBox({super.key, this.isSelected = false, required this.index});
 
   bool isSelected;
   final int index;
+
   @override
   Widget build(BuildContext context) {
     return Card(
